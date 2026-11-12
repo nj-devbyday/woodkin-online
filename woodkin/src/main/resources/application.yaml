@@ -10,11 +10,13 @@ spring:
   sql:
     init:
       schema-locations:
-        - optional:classpath:db/schema.sql
+        - classpath:db/schema.sql
       data-locations:
-        - optional:classpath:db/data.sql
+        - classpath:db/data.sql
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: none
 
 logging:
   pattern:
